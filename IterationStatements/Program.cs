@@ -27,7 +27,105 @@
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
+            PrintThousand();
+
+            Threes();
+
+            Console.WriteLine(Equals(4, 7));
+
+            Console.WriteLine(OddOrEven (7));
+
+            Console.WriteLine(IsPositive(9));
+
+            Console.WriteLine(VotingAge(26));
+
+            string num = Console.ReadLine();
+            Console.WriteLine(TenToTen(int.Parse(num)));
+
+            string num2 = Console.ReadLine();
+            MultiTable(int.Parse (num2));
+
+        }
+
+        public static void PrintThousand()
+        {
+            for(int i = 1000; i >= -1000; i --)
+            {
+                Console.WriteLine(i);
+            }
+
+        }
+
+        public static void Threes()
+        {
+            for (int i = 3; i <= 999; i += 3)
+            {
+                Console.WriteLine(i);
+            }
+        }
+
+        public static bool Equals(int a, int b)
+        {
+           var check = (a == b) ? true : false;
+
+            return check; 
+        }
+
+        public static bool OddOrEven(int number)
+        { 
             
+            if (number % 2 == 0)
+            {
+                return true;
+
+            }
+            else
+            {
+               return false;
+            }
+
+        }
+
+        public static bool IsPositive(int num1)
+        {
+            if (num1 > 0)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public static bool VotingAge (int age)
+        {
+            if (age >= 18)
+            {
+                Console.WriteLine("Congrats, you can vote");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("You are too young, better luck next years");
+                return false;
+            }
+        }
+
+        public static bool TenToTen (int number)
+        {
+            if (number <= 10 && number >= -10)
+            {
+                return true;
+
+            }
+           return false; 
+        }
+
+        public static void MultiTable(int number)
+        {
+            for (int i = 1; i <= 12; i++)
+            {
+                Console.WriteLine(number * i);
+            }
         }
     }
 }
